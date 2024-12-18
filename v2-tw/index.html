@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyWebsite-tailwind</title>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</head>
+
+<body>
+    <div class="flex h-screen">
+        <div class="flex flex-col justify-between w-1/2 bg-cover bg-no-repeat max-h-[1440px]"
+            style="background-image: url('construction_structure.jpg');">
+            <div class="text-white text-2xl m-8">Acme Inc</div>
+            <div class="text-white text-xl m-8 sans">
+                <p class="font-sans text-2xl">"This library has saved me countless hours of work and helped me deliver
+                    stunning designs to my clients faster than ever before. Highly recommended!"</p>
+                <div class="text-lg mt-4">Sofia Davis</div>
+            </div>
+        </div>
+        <div class="relative flex flex-col items-center justify-center w-1/2">
+            <div class="absolute top-4 right-4">
+                <button id="login" class="text-lg px-4 py-2">Login</button>
+            </div>
+            <div class="flex flex-col items-center space-y-6">
+                <h1 class="text-3xl font-sans font-bold">Create an account</h1>
+                <p class="text-gray-500 text-xl">Enter your email below to create your account</p>
+                <input type="text" id="username" placeholder="name@example.com"
+                    class="w-96 h-10 text-xl border-gray-300 border rounded-md px-4">
+                <button id="signin" class="w-96 h-12 bg-black text-white text-lg rounded-md">Sign In with Email</button>
+                <div class="flex items-center w-96">
+                    <div class="flex-1 border-t border-gray-300"></div>
+                    <span class="px-2 text-gray-500">OR CONTINUE WITH</span>
+                    <div class="flex-1 border-t border-gray-300"></div>
+                </div>
+                <button id="jumptoGit"
+                    class="w-96 h-12 bg-white text-lg border-gray-300 border rounded-md">GitHub</button>
+                <div class="text-gray-500 text-sm text-center">
+                    <p>By clicking continue, you agree to our <u>Terms</u></p>
+                    <p><u>of Service</u> and <u>Privacy Policy</u></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
