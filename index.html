@@ -12,11 +12,12 @@
       .w-120{
         width: 30rem;
       }
-      .font-Georgia{
-        font-family: Georgia, serif;;
+      .font-Arial{
+        font-family: Arial, serif;;
     }
     }
     </style>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -30,12 +31,13 @@
                 <div class="text-lg mt-4">Sofia Davis</div>
             </div>
         </div>
+
         <div class="relative flex flex-col items-center justify-center w-1/2">
             <div class="absolute top-4 right-4">
                 <button id="login" class="text-lg px-4 py-2">Login</button>
             </div>
             <div class="flex flex-col items-center space-y-6">
-                <h1 class="text-3xl font-Georgia font-bold">Create an account</h1>
+                <h1 class="text-3xl font-Arial font-bold">Create an account</h1>
                 <p class="text-gray-500 text-xl">Enter your email below to create your account</p>
                 <input type="text" id="username" placeholder="name@example.com"
                     class="w-120 h-10 text-xl border-gray-300 border rounded-md px-4">
@@ -46,8 +48,11 @@
                     <span class="px-2 text-gray-500">OR CONTINUE WITH</span>
                     <div class="flex-1 border-t border-gray-300"></div>
                 </div>
-                <button id="jumptoGit"
-                    class="w-120 h-12 bg-white text-lg border-gray-300 border rounded-md">GitHub</button>
+                <button onclick="location.href='http://github.com'" id="jumptoGit"
+                    class="w-120 h-12 bg-white text-lg border-gray-300 border flex rounded-md items-center space-x-1 justify-center">
+                    <img src="GitHub-Mark.png" class="w-8 h-8 object-contain">
+                    <span>GitHub</span>
+                </button>
                 <div class="text-gray-500 text-sm text-center">
                     <p>By clicking continue, you agree to our <u>Terms</u></p>
                     <p><u>of Service</u> and <u>Privacy Policy</u></p>
