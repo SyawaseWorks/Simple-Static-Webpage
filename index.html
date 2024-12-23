@@ -11,18 +11,40 @@
         @layer utilities {
       .w-120{
         width: 30rem;
-      }
+    }
       .font-Arial{
-        font-family: Arial, serif;;
+        font-family: Arial, serif;
+    }
+
+    @media only screen and (max-width: 768px){
+        #main{
+            @apply justify-center;
+        }
+        #img-container{
+            @apply hidden;
+        }
+        #main-container{
+            @apply m-4 w-4/5;
+        }
+        #login{
+            @apply absolute top-0 right-0;
+        }
+        #signup{
+            @apply text-wrap;
+        }
+        #username,#signin,#jumptoGit{
+            @apply max-w-full;
+        }
     }
     }
+    
     </style>
 </head>
 
 <body>
-    <div class="flex h-screen">
+    <div class="flex h-screen" id="main">
         <div class="flex flex-col justify-between w-1/2 bg-cover bg-no-repeat max-h-[1440px]"
-            style="background-image: url('construction_structure.jpg');">
+            style="background-image: url('construction_structure.jpg');" id="img-container">
             <div class="text-white text-2xl m-8">Acme Inc</div>
             <div class="text-white text-xl m-8 sans">
                 <p class="font-sans text-2xl">"This library has saved me countless hours of work and helped me deliver
@@ -31,11 +53,11 @@
             </div>
         </div>
 
-        <div class="relative flex flex-col items-center justify-center w-1/2">
-            <div class="absolute top-4 right-4">
+        <div class="relative flex flex-col items-center justify-center w-1/2" id="main-container">
+            <div class="absolute top-4 right-4" id="login">
                 <button id="login" class="text-lg px-4 py-2">Login</button>
             </div>
-            <div class="flex flex-col items-center space-y-6">
+            <div class="flex flex-col items-center space-y-6" id="signup">
                 <h1 class="text-3xl font-Arial font-bold">Create an account</h1>
                 <p class="text-gray-500 text-xl">Enter your email below to create your account</p>
                 <input type="text" id="username" placeholder="name@example.com"
@@ -47,7 +69,7 @@
                     <span class="px-2 text-gray-500">OR CONTINUE WITH</span>
                     <div class="flex-1 border-t border-gray-300"></div>
                 </div>
-                <button onclick="location.href='http://github.com'" id="jumptoGit"
+                <button id="jumptoGit"
                     class="w-120 h-12 bg-white text-lg border-gray-300 border flex rounded-md items-center space-x-1 justify-center">
                     <img src="GitHub-Mark.png" class="w-8 h-8 object-contain">
                     <span>GitHub</span>
