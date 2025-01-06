@@ -7,84 +7,48 @@
     <title>CopyWebsite-tailwind</title>
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-      .w-120{
-        width: 30rem;
-    }
-      .font-Arial{
-        font-family: Arial, serif;
-    }
 
-    @media only screen and (max-width: 990px){
-        #main{
-            @apply justify-center;
-        }
-        #img-container{
-            @apply hidden;
-        }
-        #main-container{
-            @apply m-4 w-4/5;
-        }
-        #login{
-            @apply absolute top-0 right-0;
-        }
-        #signup{
-            @apply text-wrap my-8;
-        }
-        #main-container{
-            @apply max-w-full;
-        }
-    }
-    @media only screen and (max-width: 500px) {
-      #signup {
-        @apply origin-center w-full;
-        transform: scale(0.75);
-      }
-      #login{
-            @apply px-0 py-0;
-        }
-    }
-} 
-    </style>
 </head>
 
 <body>
-    <div class="flex h-screen" id="main">
-        <div class="flex flex-col justify-between w-1/2 bg-cover bg-no-repeat max-h-[1440px]"
+    <div class="flex justify-center md: h-screen" id="main">
+        <div class="flex hidden md:flex flex-col justify-between w-1/2 bg-cover bg-no-repeat max-h-full"
             style="background-image: url('construction_structure.jpg');" id="img-container">
-            <div class="text-white text-2xl m-8">Acme Inc</div>
-            <div class="text-white text-xl m-8 sans">
-                <p class="font-sans text-2xl">"This library has saved me countless hours of work and helped me deliver
+            <div class="text-white m-8">Acme Inc</div>
+            <div class="text-white m-8">
+                <p>"This library has saved me countless hours of work and helped me deliver
                     stunning designs to my clients faster than ever before. Highly recommended!"</p>
-                <div class="text-lg mt-4">Sofia Davis</div>
+                <div class="mt-4">Sofia Davis</div>
             </div>
         </div>
 
-        <div class="relative flex flex-col items-center justify-center w-1/2 overflow-visible" id="main-container">
+        <div class="relative flex flex-col items-center justify-center max-w-full w-full overflow-visible md:w-1/2"
+            id="main-container">
             <div class="absolute top-4 right-4" id="login">
-                <button id="login" class="text-lg px-4 py-2">Login</button>
+                <button id="login"
+                    class="absolute top-0 right-0 hover:bg-slate-100 md:px-4 py-2 rounded-md">Login</button>
             </div>
-            <div class="flex flex-col items-center space-y-6" id="signup">
-                <h1 class="text-3xl font-Arial font-bold">Create an account</h1>
-                <p class="text-gray-500 text-xl">Enter your email below to create your account</p>
+            <div class="scale-75 flex md:flex flex-col items-center space-y-6 origin-center" id="signup">
+                <h1 class="text-2xl font-bold">Create an account</h1>
+                <p class="text-gray-500 text-center">Enter your email below to create your account</p>
                 <input type="text" id="username" placeholder="name@example.com"
-                    class="w-120 h-10 text-xl border-gray-300 border rounded-md px-4">
-                <button id="signin" class="w-120 h-12 bg-black text-white text-lg rounded-md">Sign In with
-                    Email</button>
-                <div class="flex items-center w-120">
+                    class="w-96 h-10 border-gray-300 border rounded-md px-4">
+                <button id="signin" class="w-96 h-12 bg-black text-white rounded-md">Sign In with Email</button>
+                <div class="flex items-center w-96">
                     <div class="flex-1 border-t border-gray-300"></div>
                     <span class="px-2 text-gray-500">OR CONTINUE WITH</span>
                     <div class="flex-1 border-t border-gray-300"></div>
                 </div>
                 <button id="jumptoGit"
-                    class="w-120 h-12 bg-white text-lg border-gray-300 border flex rounded-md items-center space-x-1 justify-center">
-                    <img src="GitHub-Mark.png" class="w-8 h-8 object-contain">
+                    class="w-96 h-12 bg-white border-gray-300 border flex rounded-md items-center space-x-1 justify-center">
+                    <img src="github-mark.svg" class="w-6 h-6 object-contain">
                     <span>GitHub</span>
                 </button>
                 <div class="text-gray-500 text-sm text-center">
-                    <p>By clicking continue, you agree to our <u>Terms</u></p>
-                    <p><u>of Service</u> and <u>Privacy Policy</u></p>
+                    <p class="w-80 underline-offset-auto">By clicking continue, you agree to our
+                        <a href="index.html" class="underline underline-offset-2">Terms of Service</a>
+                        and <a href="index.html" class="underline underline-offset-2">Privacy Policy</a>
+                    </p>
                 </div>
             </div>
         </div>
